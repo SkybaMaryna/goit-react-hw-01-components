@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import {StyledProfileCard, StyledUserDescription, StyledUserAvatar, StyledUserName, StyledUserTag, StyledUserLocation, StyledStatsList, StyledStatsLabel, StyledStatsQuantity} from './Profile.styled'
 
-const Profile = ({ username, tag, location, avatar, stats: { followers, views, likes } }) => (
+ export const Profile = ({ username, tag, location, avatar, stats: { followers, views, likes } }) => (
     <StyledProfileCard>
   <StyledUserDescription>
     <StyledUserAvatar
@@ -37,5 +37,3 @@ Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
   stats: PropTypes.objectOf(PropTypes.number).isRequired
 }
-
-export default Profile;
