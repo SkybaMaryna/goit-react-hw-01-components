@@ -1,17 +1,19 @@
 import PropTypes from "prop-types";
+import { generateRandomBackground } from 'utils/randomColor'
+import { StyledSectionStat, StyledStatTitle, StyledStatList, StyledStatItem } from "./Statistics.styled";
 
 const Statistics = ({ title, stats }) => (
-    <section className="statistics">
-     {title && <h2 className="title">{title}</h2>}
+    <StyledSectionStat>
+     {title && <StyledStatTitle>{title}</StyledStatTitle>}
 
-    <ul className="stat-list"> {
+    <StyledStatList> {
         stats.map(({id, label, percentage}) => (
-        <li className="item" key={id}>
-            <span className="label">{label}</span>
-            <span className="percentage">{percentage}%</span>
-        </li>))}
-    </ul>
-</section>
+            <StyledStatItem backGroundColor={generateRandomBackground()} key={id}>
+            <span>{label}</span>
+            <span>{percentage}%</span>
+        </StyledStatItem>))}
+    </StyledStatList>
+</StyledSectionStat>
 )
 
 Statistics.propTypes = {
