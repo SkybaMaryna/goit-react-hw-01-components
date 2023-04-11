@@ -1,33 +1,33 @@
 import PropTypes from "prop-types";
-import {ProfileCard, UserDescription, UserAvatar, UserName, UserTag, UserLocation, StatsList, StatsLabel, StatsQuantity} from './Profile.styled'
+import {StyledProfileCard, StyledUserDescription, StyledUserAvatar, StyledUserName, StyledUserTag, StyledUserLocation, StyledStatsList, StyledStatsLabel, StyledStatsQuantity} from './Profile.styled'
 
 const Profile = ({ username, tag, location, avatar, stats: { followers, views, likes } }) => (
-    <ProfileCard>
-  <UserDescription>
-    <UserAvatar
+    <StyledProfileCard>
+  <StyledUserDescription>
+    <StyledUserAvatar
       src={avatar}
       alt={username}
     />
-    <UserName>{username}</UserName>
-    <UserTag>@{tag}</UserTag>
-    <UserLocation>{location}</UserLocation>
-  </UserDescription>
+    <StyledUserName>{username}</StyledUserName>
+    <StyledUserTag>@{tag}</StyledUserTag>
+    <StyledUserLocation>{location}</StyledUserLocation>
+  </StyledUserDescription>
 
-  <StatsList>
+  <StyledStatsList>
     <li>
-      <StatsLabel>Followers</StatsLabel><br/>
-      <StatsQuantity>{followers}</StatsQuantity>
+      <StyledStatsLabel>Followers</StyledStatsLabel><br/>
+      <StyledStatsQuantity>{followers}</StyledStatsQuantity>
     </li>
     <li>
-      <StatsLabel>Views</StatsLabel><br/>
-      <StatsQuantity>{views}</StatsQuantity>
+      <StyledStatsLabel>Views</StyledStatsLabel><br/>
+      <StyledStatsQuantity>{views}</StyledStatsQuantity>
     </li>
     <li>
-      <StatsLabel>Likes</StatsLabel><br/>
-      <StatsQuantity>{likes}</StatsQuantity>
+      <StyledStatsLabel>Likes</StyledStatsLabel><br/>
+      <StyledStatsQuantity>{likes}</StyledStatsQuantity>
     </li>
-  </StatsList>
-</ProfileCard>
+  </StyledStatsList>
+</StyledProfileCard>
 )
 
 Profile.propTypes = {
