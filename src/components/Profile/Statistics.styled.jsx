@@ -27,3 +27,5 @@ export const StyledStatItem = styled.li`
    color: white;
    background-color: ${props => props.backGroundColor}
 `
+
+
