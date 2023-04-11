@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { generateRandomBackground } from 'utils/randomColor'
+import { generateRandomBackground } from 'utils/randomColor';
 import { StyledSectionStat, StyledStatTitle, StyledStatList, StyledStatItem } from './Statistics.styled';
 
 const Statistics = ({ title, stats }) => (
